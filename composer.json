@@ -1,0 +1,26 @@
+{
+    "name": "hedeqiang\/laravel-permission",
+    "description": "基于 spatie\/laravel-permission 二次开发的按钮级权限管理 Laravel 扩展包。(角色、权限、菜单、按钮)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hedeqiang",
+            "email": "laravel_code@163.com"
+        }
+    ],
+    "require": {
+        "spatie/laravel-permission": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hedeqiang\\Permission\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hedeqiang\\Permission\\PermissionServiceProvider"
+            ]
+        }
+    }
+}
