@@ -17,9 +17,9 @@ class CreateMenusTables extends Migration
         $columnNames = config('permission.column_names');
 
         Schema::create($tableNames['menus'], function (Blueprint $table) use ($tableNames) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->unsignedInteger('level')->default(0);
-            $table->unsignedInteger('parent_id')->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('parent_path');
             $table->string('name');
             $table->string('url')->default('#');
@@ -40,8 +40,8 @@ class CreateMenusTables extends Migration
 
         Schema::create($tableNames['role_has_menus'], function (Blueprint $table) use ($tableNames, $columnNames) {
 
-            $table->unsignedInteger('menu_id');
-            $table->unsignedInteger('role_id');
+            $table->unsignedBigInteger('menu_id');
+            $table->unsignedBigInteger('role_id');
 
             $table->foreign('menu_id')
                 ->references('id')
@@ -58,8 +58,8 @@ class CreateMenusTables extends Migration
 
         Schema::create($tableNames['menu_table'], function (Blueprint $table) use ($tableNames, $columnNames) {
 
-            $table->increments('id');
-            $table->unsignedInteger('menu_id');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('menu_id');
             $table->string('column_config');
             $table->string('remark');
             $table->unsignedInteger('sort');
