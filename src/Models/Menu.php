@@ -85,10 +85,6 @@ class Menu extends Model implements MenuContract
             throw MenuAlreadyExists::create($attributes['name']);
         }
 
-        if (isNotLumen() && app()::VERSION < '5.4') {
-            return parent::create($attributes);
-        }
-
         return static::query()->create($attributes);
     }
 
