@@ -3,7 +3,7 @@
 <p align="center"> 基于 spatie/laravel-permission 二次开发的按钮级权限管理 Laravel 扩展包。(角色、权限、菜单、按钮).</p>
 
 
-> 本扩展包来自 [achais/laravel-permission](https://github.com/achais/laravel-permission) ,fork 此扩展目的在于 Laravel 7 的版本使用。 代码均为：[achais/laravel-permission](https://github.com/achais/laravel-permission) 
+> 本扩展包来自 [achais/laravel-permission](https://github.com/achais/laravel-permission) ,fork 此扩展目的在于 Laravel 7 的版本使用。如需在 Laravel 5.5 版本使用请使用 [achais/laravel-permission](https://github.com/achais/laravel-permission) 。所有代码均来自：[achais/laravel-permission](https://github.com/achais/laravel-permission) ，感谢 [作者 achais](https://github.com/achais)
 
 ## Requirement
 - "php": ">=7.2"
