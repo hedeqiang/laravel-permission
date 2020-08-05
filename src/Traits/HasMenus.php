@@ -59,17 +59,28 @@ trait HasMenus
 
         return $this;
     }
+    
+    /**
+     * @param mixed ...$menus
+     * @return mixed
+     */
+    public function syncRoles(...$menus)
+    {
+        $this->menus()->detach();
+
+        return $this->giveMenuTo($menus);
+    }
 
     protected function getStoredMenu($menus)
     {
         $menuClass = $this->getMenuClass();
 
         if (is_numeric($menus)) {
-            return $menuClass->findById($menus);
+            return $menuClass::findById($menus);
         }
 
         if (is_string($menus)) {
-            return $menuClass->findByName($menus);
+            return $menuClass::findByName($menus);
         }
 
         if (is_array($menus)) {
